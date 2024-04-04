@@ -45,9 +45,12 @@ function Header() {
 
 
     return (
-        <header className="fixed z-10 w-full bg-white flex justify-between py-2 px-4 items-center shadow-md">
-            <Link href='/main' className="font-bold text-sky-900 text-lg">BLUE MARBLE</Link>
-            <div className="flex bg-zinc-100 items-center text-gray-600 px-3 py-1 rounded-full relative"
+        <header className="fixed z-10 w-full bg-zinc-100 flex justify-between py-2 px-4 items-center shadow-md">
+            <div className="flex gap-5 items-center ">
+                <Link href='/main' className="font-bold text-sky-900 text-lg">BLUE MARBLE</Link>
+                <img src={"https://s4.aconvert.com/convert/p3r68-cdx67/azmi5-k0lk6.jpg"} alt="Logo do site" className="w-12 h-12 rounded-full" />
+            </div>
+            <div className="flex  bg-zinc-100 items-center text-gray-600 px-3 py-1 rounded-full relative"
                 onClick={() => setSearchResults(true)}
                 onMouseLeave={() => setSearchResults(false)}>
                 <input
@@ -89,7 +92,7 @@ function Header() {
                     </button>
                     {showMenu && (
                         <div className="absolute flex flex-col bg-white p-4 shadow-md rounded-md gap-2 border-t whitespace-nowrap right-[-0.5rem]">
-                            <Link href="" className="border-b">Editar perfil</Link>
+                            <Link href={'/profile?id=' + user?.id} className="border-b">Editar perfil</Link>
                             <button onClick={() => mutation.mutate()}>Logout</button>
                         </div>
                     )}

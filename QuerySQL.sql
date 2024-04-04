@@ -107,7 +107,7 @@ on delete cascade
 on update cascade)
 auto_increment=1;
 
-INSERT INTO likes (`likes_use_id`, `likes_post_id`) value (4,15);
+INSERT INTO likes (`likes_user_id`, `likes_post_id`) value (4,15);
 
 UPDATE user
 SET id = 3
